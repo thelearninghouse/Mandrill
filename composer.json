@@ -1,5 +1,5 @@
 {
-    "name": "weblee/mandrill",
+    "name": "thelearninghouse/mandrill",
     "description" : "Laravel 5 Mandrill API Wrapper",
     "keywords": ["mandrill", "laravel", "email"],
     "license": "MIT",
