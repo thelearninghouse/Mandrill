@@ -1,6 +1,6 @@
 <?php
 
-namespace Weblee\Mandrill;
+namespace Tlh\Mandrill;
 
 use Mandrill;
 

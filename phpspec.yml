@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: Weblee\Mandrill
-        psr4_prefix: Weblee\Mandrill
+        namespace: Tlh\Mandrill
+        psr4_prefix: Tlh\Mandrill
         src_parh: src

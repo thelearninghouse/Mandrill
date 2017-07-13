@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\Weblee\Mandrill;
+namespace spec\Tlh\Mandrill;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;

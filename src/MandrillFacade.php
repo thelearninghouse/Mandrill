@@ -1,6 +1,6 @@
 <?php
 
-namespace Weblee\Mandrill;
+namespace Tlh\Mandrill;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -13,4 +13,4 @@ class MandrillFacade extends Facade {
      */
     protected static function getFacadeAccessor() { return 'mandrill_mail'; }
 
-} 
+}

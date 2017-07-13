@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Weblee\\Mandrill\\": "src"
+            "Tlh\\Mandrill\\": "src"
         }
     }
 }

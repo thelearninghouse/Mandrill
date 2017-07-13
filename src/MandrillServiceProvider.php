@@ -1,6 +1,6 @@
 <?php
 
-namespace Weblee\Mandrill;
+namespace Tlh\Mandrill;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -27,13 +27,13 @@ class MandrillServiceProvider extends ServiceProvider{
     {
 
         $this->app->bind('mandrill_mail', function($app){
-            return new Mail($app['config']['services']['mandrill']['secret']);
+            return new Mail(config('services.mandrill.api_key'));
         });
 
-        $this->app->bind('Weblee\Mandrill\Mail', function($app){
-            return new Mail($app['config']['services']['mandrill']['secret']);
+        $this->app->bind('Tlh\Mandrill\Mail', function($app){
+            return new Mail(config('services.mandrill.api_key'));
         });
 
     }
 
-} 
+}

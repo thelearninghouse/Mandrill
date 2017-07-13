@@ -17,14 +17,14 @@ Per usual, install Commander through Composer.
 
 ```
 "require": {
-	"weblee/mandrill": "dev-master"
+	"thelearninghouse/mandrill": "~1.0"
 }
 ```
 
 Next, update `config/services.php` with your Mandrill API key. You are better off using Laravel env file to store you key.
 ```php
 	'mandrill' => [
-		'secret' => env('MANDRILL_KEY'),
+		'api_key' => env('MANDRILL_KEY'),
 	],
 ```
 
@@ -32,30 +32,30 @@ Now you are ready to register the service provider and facade if you wish `confi
 ```php
 	'providers' => [
 		......
-		Weblee\Mandrill\MandrillServiceProvider::class,
+		Tlh\Mandrill\MandrillServiceProvider::class,
 	],
-	
+
 	'aliases' => [
 		......
-		'MandrillMail'  => Weblee\Mandrill\MandrillFacade::class
+		'MandrillMail'  => Tlh\Mandrill\MandrillFacade::class
 	]
 ```
 
 ## Usage
 Either inject the service into your construct or class method or use the supplied facade.
 
-Examples: 
+Examples:
 ```php
 <?php
 
 namespace App;
 
-use Weblee\Mandrill\Mail;
+use Tlh\Mandrill\Mail;
 
 class SendMyMail{
 
 	private $mandrill;
-	
+
 	/**
 	* Via construct injection
 	*
@@ -64,13 +64,13 @@ class SendMyMail{
     {
     	$this->mandrill = $mandrill;
     }
-    
+
 	public function sendTemplate($data)
 	{
 		$this->mandrill->messages()->sendTemplate($data)
 	}
-    
-	// ----- OR  -------	
+
+	// ----- OR  -------
 
 	/**
 	* Via method injection
@@ -92,7 +92,6 @@ class SendMyMail{
 		\MandrillMail::messages()->sendTemplate($data);
 	}
 }
-``` 
+```
 
 Just follow the Mandrill docs on what call's you can do and the data to provide.
-
